@@ -1,3 +1,10 @@
 .bg-grey {
 	background: #D3D3D3;
 }
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}

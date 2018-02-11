@@ -7,7 +7,7 @@ var DinnerModel = function() {
 
 	var numberOfGuests = 0;
 	var menu = [];
-	var currentDish;
+	var currentDish = 0;
 
 	this.addObserver = function(observer) {
         observers.push(observer);
@@ -30,7 +30,10 @@ var DinnerModel = function() {
 	};
 
     this.getCurrentDish = function() {
-    	return currentDish;
+    	if(currentDish)
+    		return currentDish;
+    	else
+    		return 0;
 	};
 
 	this.setNumberOfGuests = function(num) {

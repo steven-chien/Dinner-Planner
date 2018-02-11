@@ -23,7 +23,7 @@
 
 <div class="container-fluid" id="startPageView">
     <div class="row">
-        <div class="container-fluid col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="container-fluid col-xs-12 col-sm-12 col-md-12 text-center" style="padding: 10%;">
             <p>Welcome to dinner planer, your source of the greatest recipes, all planned according to your need.</p>
         </div>
     </div>
@@ -37,37 +37,54 @@
 <div class="container-fluid" id="menuView">
     <!-- dinnerMenuView -->
     <div class="container-fluid col-xs-12 col-md-2" id="dinnerMenuView">
-        <h3>My Dinner</h3>
         <div class="row">
-            <div class="col-xs-6 col-sm-9 col-md-4 col-lg-5">
-                People:
+            <div class="col-xs-9 col-sm-9">
+                <h3>My Dinner</h3>
             </div>
-            <div class="col-xs-2 col-sm-1 col-md-1 col-lg-2">
-                <span id="numOfGuests"></span>
-            </div>
-            <div class="col-xs-4 col-sm-2 col-md-8 col-lg-5">
-                <div class="btn-group" role="group">
-                    <button class="btn" id="addNoGuestButton">+</button><button class="btn" id="reduceNoGuestButton">-</button>
-                </div>
+            <div class="col-xs-3 col-sm-3 visible-xs visible-xs" id="collapseButtonVisibility">
+                <a class="btn" id="collapseButton" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="container">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </a>
             </div>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <div class="list-group" id="selectedDishes">
-                    <table class="table">
-                        <thead><th scope="col">Dish Name</th><th scope="col">Cost</th></thead>
-                        <tbody><td></td><td></td></tbody>
-                    </table>
+        <div class="panel-collapse collapse in" id="collapseExample">
+            <hr>
+            <div class="row">
+                <div class="col-xs-7 col-sm-9 col-md-4 col-lg-5" style="padding: 1%;">
+                    <h4>People:</h4>
+                </div>
+                <div class="col-xs-2 col-sm-1 col-md-1 col-lg-2" style="padding: 1%;">
+                    <h4><span id="numOfGuests"></span></h4>
+                </div>
+                <div class="col-xs-3 col-sm-2 col-md-8 col-lg-5" style="text-align: right;">
+                    <div class="btn-group" role="group">
+                        <button class="btn" id="addNoGuestButton">+</button><button class="btn" id="reduceNoGuestButton">-</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <button class="btn btn-primary" style="width:100%" id="confirmDinnerButton">Confirm Dinner</button>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <div class="list-group" id="selectedDishes">
+                        <table class="table">
+                            <thead><th scope="col">Dish Name</th><th scope="col">Cost</th></thead>
+                            <tbody><td></td><td></td></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <button class="btn btn-primary" style="width:100%" id="confirmDinnerButton">Confirm Dinner</button>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- dishesView -->
     <div class="container-fluid col-xs-12 col-md-10" id="dishesView">
@@ -84,7 +101,7 @@
                         Select a menu
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="padding: 2%; text-align:left;">
+                    <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12 col-lg-12" aria-labelledby="dropdownMenu1" style="padding: 2%; text-align:left;">
                         <li id="starterMenu"><a href="#">starter</a></li>
                         <li id="mainDishMenu"><a href="#">main dish</a></li>
                         <li id="dessertMenu"><a href="#">dessert</a></li>
